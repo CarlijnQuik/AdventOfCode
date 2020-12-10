@@ -1,11 +1,11 @@
 
-file = open("Day3_input.txt", "r")
+f = open("Day3_input.txt", "r")
 
 lines = []
-for line in file:
+for line in f:
     lines.append(line.strip())
 
-file.close()
+f.close()
 
 def find_trees_with_slope(right, down):
     i = down
@@ -23,6 +23,7 @@ def find_trees_with_slope(right, down):
 
 right1_down1 = find_trees_with_slope(1,1)
 print(right1_down1)
+# Part 1
 right3_down1 = find_trees_with_slope(3,1)
 print(right3_down1)
 right5_down1 = find_trees_with_slope(5,1)
@@ -32,5 +33,6 @@ print(right7_down1)
 right1_down2 = find_trees_with_slope(1,2)
 print(right1_down2)
 
+# Part 2
 total_trees = right1_down1*right3_down1*right5_down1*right7_down1*right1_down2
 print(total_trees)
